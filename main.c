@@ -142,7 +142,7 @@ static int Update_Emergency_Mode(void) {
         return 0;
     }
 
-    // 즉사 패턴
+    // 즉시종료 패턴
     emergency_warning_phase = 0;
 
     if (!emergency_background_drawn) {
@@ -153,7 +153,7 @@ static int Update_Emergency_Mode(void) {
 
     Draw_Safe_Zone();
 
-    // 즉사 조건
+    // 즉시종료료 조건
     if (!Is_In_Safe_Zone(&frog)) {
         emergency_active = 0;
         emergency_mode_done = 1;
@@ -490,4 +490,5 @@ void Main(void) {
             }
         }
     }
+
 }
